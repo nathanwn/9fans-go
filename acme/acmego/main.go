@@ -49,7 +49,9 @@ var formatters = map[string][]string{
 // Non-Go formatters (only loaded with -f option).
 var otherFormatters = map[string][]string{
 	".rs": []string{"rustfmt", "--emit", "stdout"},
-	".py": []string{"yapf"},
+	// ".py": []string{"yapf"},
+	".go": []string{"gofmt"},
+	".cpp": []string{"clang-format"},
 }
 
 func main() {
